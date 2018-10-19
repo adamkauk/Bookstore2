@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=id\ title\ pages\ price\ chapters\ author
+comment0.target=Book(int,\ java.lang.String,\ int,\ int,\ int,\ java.lang.String)
+comment0.text=\n\ Constructor\n\ \n\ @param\ \ id\ \ \ \ the\ id\ of\ the\ book\ \n\ @param\ \ title\ \ \ \ the\ title\ of\ the\ book\n\ @param\ \ pages\ \ \ \ the\ number\ of\ pages\ of\ the\ book\n\ @param\ \ price\ \ \ \ the\ price\ of\ the\ book\n\ @param\ \ chapters\ the\ number\ of\ chapters\ in\ the\ book\n\ @param\ \ author\ \ author\ of\ the\ book\n
+comment1.params=
+comment1.target=int\ getChapters()
+comment1.text=\n\ Accessor\ method\n\ \n\ @return\ \ \ \ \ \ \ \ the\ number\ of\ chapters\ in\ the\ Book\n
+comment2.params=chapters
+comment2.target=void\ setChapters(int)
+comment2.text=\n\ Mutator\ method\n\ \n\ @param\ \ chapters\ \ \ \ the\ number\ of\ chapters\ in\ the\ Book\ \n
+comment3.params=
+comment3.target=java.lang.String\ getAuthor()
+comment3.text=\n\ Accessor\ method\n\ \n\ @return\ \ \ \ \ \ \ \ list\ of\ the\ author\ of\ the\ book\n
+comment4.params=author
+comment4.target=void\ setAuthor(java.lang.String)
+comment4.text=\n\ Mutator\ method\n\ \n\ @param\ \ authors\ \ \ \ \ \ list\ of\ the\ author\ of\ the\ book\ \n
+numComments=5
