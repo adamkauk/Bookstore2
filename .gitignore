@@ -8,4 +8,6 @@
 /SequentialSearch.class
 /InputTerminal.class
 /InputOutput.class
-Bookstore.class
+
+*.class
+
