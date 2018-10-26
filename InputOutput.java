@@ -18,6 +18,7 @@ public abstract class InputOutput
 		System.out.print(string);
 		
 	}
+}
 	
 	
 }
