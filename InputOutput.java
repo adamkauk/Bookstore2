@@ -36,6 +36,13 @@ public abstract class InputOutput
         } catch (Exception e) {
             result = (char) 0;
         }
-        return result;}
-	
+        return result;} 
+	 
+	public static String inputString(String string) {
+		System.out.println(string);
+		Scanner in = new Scanner (System.in); 
+		String statement = in.nextLine(); 
+		return statement;
+	}
 }
+	
