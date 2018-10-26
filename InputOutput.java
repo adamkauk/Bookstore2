@@ -16,7 +16,8 @@ public abstract class InputOutput
 	public static void output(String string) {
 		// TODO Auto-generated method stub
 		System.out.print(string);
-		
+		System.out.println("hi");
+		return;
 	}
 	
 	
