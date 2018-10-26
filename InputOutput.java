@@ -20,6 +20,7 @@ public abstract class InputOutput
 		return;
 	}
 	
+	// created by Kevin
 	static char inputChar(String prompt) {
         char result = (char) 0;
 
