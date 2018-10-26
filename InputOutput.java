@@ -38,13 +38,4 @@ public abstract class InputOutput
         }
         return result;}
 	
-
-	public static String input(String string) {
-		System.out.println(string);
-		Scanner in = new Scanner (System.in); 
-		String statement = in.nextLine(); 
-		return statement;
-		
-	}
-	
 }
