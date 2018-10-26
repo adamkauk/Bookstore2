@@ -8,6 +8,7 @@
  * @authors Kostas Dimitriou & Markos Hatzitaskos
  * @version 1.0
  */
+<<<<<<< HEAD
 public abstract class InputOutput {
 
     //The methods used here can be found in:
@@ -76,6 +77,28 @@ public abstract class InputOutput {
     }
 
     static char inputChar(String prompt) {
+=======
+public abstract class InputOutput
+{
+
+	public static void output(String string) {
+		System.out.print(string);
+		System.out.println("");
+		return;
+	}
+
+	static int inputInt (String prompt){
+		int line;
+		@SuppressWarnings("resource")
+		Scanner in_int = new Scanner(System.in);
+		System.out.print(prompt);
+	line = in_int.nextInt();
+		return line;
+}
+	
+	// created by Kevin
+	static char inputChar(String prompt) {
+>>>>>>> 55d475a65f9ae267f617c68743cc4c1059c6a0bf
         char result = (char) 0;
 
         try {
@@ -83,6 +106,7 @@ public abstract class InputOutput {
         } catch (Exception e) {
             result = (char) 0;
         }
+<<<<<<< HEAD
         return result;}
         //3
     static byte inputByte(String prompt) {
@@ -135,6 +159,22 @@ public abstract class InputOutput {
         } catch (Exception e) {
             result = false;
         }
+=======
+        return result;} 
+	 
+	static String inputString (String prompt) {
+		return input(prompt);
+	}
+	
+
+	public static String input(String string) {
+		System.out.println(string);
+		@SuppressWarnings("resource")
+		Scanner in_input = new Scanner (System.in); 
+		String statement = in_input.nextLine(); 
+		return statement;
+	}
+>>>>>>> 55d475a65f9ae267f617c68743cc4c1059c6a0bf
 
         return result;
     }
