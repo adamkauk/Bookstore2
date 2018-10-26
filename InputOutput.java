@@ -20,5 +20,14 @@ public abstract class InputOutput
 		return;
 	}
 	
+	static char inputChar(String prompt) {
+        char result = (char) 0;
+
+        try {
+            result = input(prompt).charAt(0);
+        } catch (Exception e) {
+            result = (char) 0;
+        }
+        return result;}
 	
 }
