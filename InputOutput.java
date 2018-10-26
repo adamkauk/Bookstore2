@@ -14,7 +14,6 @@ public abstract class InputOutput
 {
 
 	public static void output(String string) {
-		// TODO Auto-generated method stub
 		System.out.print(string);
 		System.out.println("hi");
 		return;
@@ -22,9 +21,10 @@ public abstract class InputOutput
 
 	static int inputInt (String prompt){
 		int line;
-		Scanner in = new Scanner(System.in);
+		@SuppressWarnings("resource")
+		Scanner in_int = new Scanner(System.in);
 		System.out.print(prompt);
-	line = in.nextInt();
+	line = in_int.nextInt();
 		return line;
 }
 	
@@ -46,8 +46,9 @@ public abstract class InputOutput
 
 	public static String input(String string) {
 		System.out.println(string);
-		Scanner in = new Scanner (System.in); 
-		String statement = in.nextLine(); 
+		@SuppressWarnings("resource")
+		Scanner in_input = new Scanner (System.in); 
+		String statement = in_input.nextLine(); 
 		return statement;
 	}
 
