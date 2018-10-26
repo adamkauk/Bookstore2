@@ -38,4 +38,16 @@ public abstract class InputOutput
         }
         return result;}
 	
+
+static String input(String str){
+		String inputline = "";
+		try {
+		inputline = (new java.io.BufferedReader(new java.io.InputStreamReader(System.in))).readLine();}
+		catch(Exception e)
+		{String err = e.toString();
+		 System.out.println(err);
+		 inputline = "";
+		}
+		return inputline;
+	}
 }
