@@ -16,7 +16,8 @@ public abstract class InputOutput
 	public static void output(String string) {
 		// TODO Auto-generated method stub
 		System.out.print(string);
-		
+		System.out.println("hi");
+		return;
 	}
 
 	static int inputInt (String prompt){
@@ -27,5 +28,14 @@ public abstract class InputOutput
 		return line;
 }
 	
+	static char inputChar(String prompt) {
+        char result = (char) 0;
+
+        try {
+            result = input(prompt).charAt(0);
+        } catch (Exception e) {
+            result = (char) 0;
+        }
+        return result;}
 	
 }
