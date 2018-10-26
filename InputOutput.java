@@ -18,6 +18,13 @@ public abstract class InputOutput
 		System.out.print(string);
 		
 	}
+
+	static int inputInt (String prompt){
+		int line;
+		Scanner in = new Scanner(System.in);
+		System.out.print(prompt);
+	line = in.nextInt();
+		return line;
 }
 	
 	
