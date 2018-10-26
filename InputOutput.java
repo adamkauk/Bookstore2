@@ -19,6 +19,23 @@ public abstract class InputOutput
 		System.out.println("hi");
 		return;
 	}
+
+	static int inputInt (String prompt){
+		int line;
+		Scanner in = new Scanner(System.in);
+		System.out.print(prompt);
+	line = in.nextInt();
+		return line;
+}
 	
+	static char inputChar(String prompt) {
+        char result = (char) 0;
+
+        try {
+            result = input(prompt).charAt(0);
+        } catch (Exception e) {
+            result = (char) 0;
+        }
+        return result;}
 	
 }
