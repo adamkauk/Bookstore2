@@ -15,7 +15,7 @@ public abstract class InputOutput
 
 	public static void output(String string) {
 		System.out.print(string);
-		System.out.println("hi");
+		System.out.println("");
 		return;
 	}
 
