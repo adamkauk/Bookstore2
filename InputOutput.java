@@ -14,11 +14,19 @@ public abstract class InputOutput
 {
 
 	public static void output(String string) {
-		// TODO Auto-generated method stub
 		System.out.print(string);
-		System.out.println("hi");
+		System.out.println("");
 		return;
 	}
+
+	static int inputInt (String prompt){
+		int line;
+		@SuppressWarnings("resource")
+		Scanner in_int = new Scanner(System.in);
+		System.out.print(prompt);
+	line = in_int.nextInt();
+		return line;
+}
 	
 	// created by Kevin
 	static char inputChar(String prompt) {
@@ -29,6 +37,20 @@ public abstract class InputOutput
         } catch (Exception e) {
             result = (char) 0;
         }
-        return result;}
+        return result;} 
+	 
+	static String inputString (String prompt) {
+		return input(prompt);
+	}
 	
+
+	public static String input(String string) {
+		System.out.println(string);
+		@SuppressWarnings("resource")
+		Scanner in_input = new Scanner (System.in); 
+		String statement = in_input.nextLine(); 
+		return statement;
+	}
+
 }
+	

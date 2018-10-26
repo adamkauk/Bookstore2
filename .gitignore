@@ -9,6 +9,6 @@
 /InputTerminal.class
 /InputOutput.class
 
-*.class
+/*.class
 
 /JavaApplication34/nbproject/private/
