@@ -1,4 +1,3 @@
-package bookstore;
 
 /**
  * class InputTerminal Allows the user to add a book or a magazine to the

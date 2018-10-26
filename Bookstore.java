@@ -1,4 +1,4 @@
-package bookstore;
+
 
 /**
  * Bookstore class is the main class for the Bookstore example.

@@ -1,4 +1,4 @@
-package bookstore;
+
 
 /**
  * BubbleSort class contains methods to sort various data structures in specific
@@ -45,7 +45,7 @@ public class BubbleSort {
         for (last = size - 1; last > 0; last = last - 1) {
             for (current = 0; current < last; current = current + 1) {
                 
-                if ((books[current].getAuthor()).compareToIgnoreCase(books[current - 1].getAuthor()) < 0) {
+                if ((books[current+1].getAuthor()).compareToIgnoreCase(books[current].getAuthor()) < 0) {
                     temp = books[current];
                     books[current] = books[current + 1];
                     books[current + 1] = temp;
@@ -63,7 +63,7 @@ public class BubbleSort {
         for (last = size - 1; last > 0; last = last - 1) {
             for (current = 0; current < last; current = current + 1) {
                 
-                if ((books[current].getTitle()).compareToIgnoreCase(books[current - 1].getTitle()) < 0) {
+                if ((books[current+1].getTitle()).compareToIgnoreCase(books[current].getTitle()) < 0) {
                     temp = books[current];
                     books[current] = books[current + 1];
                     books[current + 1] = temp;
