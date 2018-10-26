@@ -44,7 +44,8 @@ public class Bookstore {
         InputOutput.output("d) Sort books by price (ascending)");
         InputOutput.output("e) Find book with title");
         InputOutput.output("f) Sort books by author name");
-        InputOutput.output("g) Exit");
+        InputOutput.output("g) Sort books by Title");
+        InputOutput.output("h) Exit");
         InputOutput.output("");
         InputOutput.output("");
 
@@ -69,6 +70,8 @@ public class Bookstore {
             case 'f':
                 sortByauthor();
             case 'g':
+                sortByTitle();
+            case 'h':
                 System.exit(0);
                 break;
             default:
@@ -233,6 +236,50 @@ public class Bookstore {
             books = BubbleSort.bubbleSortB(books);
             InputOutput.output("");
             InputOutput.output("Sorted books by author name :");
+            InputOutput.output("");
+        }
+
+        for (int i = books.length - 1; i >= 0; i--) {
+            int id = books[i].getId();
+            String title = books[i].getTitle();
+            int pages = books[i].getPages();
+            int price = books[i].getPrice();
+            int chapters = books[i].getChapters();
+            String author = books[i].getAuthor();
+
+            InputOutput.output("");
+            InputOutput.output("=================================");
+            InputOutput.output("ID:" + id);
+            InputOutput.output("TITLE:" + title);
+            InputOutput.output("PAGES:" + pages);
+            InputOutput.output("PRICE ($):" + price);
+            InputOutput.output("CHAPTERS:" + chapters);
+            InputOutput.output("AUTHOR(S):" + author);
+
+            InputOutput.output("=================================");
+            InputOutput.output("");
+        }
+
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
+
+    }
+    
+    
+    public void sortByTitle() {
+        Book[] books = null;
+
+        //sequentially
+        books = bf.readBookFile();
+
+        if (books == null || books.length == 0) {
+            InputOutput.output("There are no books in the bookstore to sort.");
+        } else {
+            books = BubbleSort.bubbleSortC(books);
+            InputOutput.output("");
+            InputOutput.output("Sorted books by Title :");
             InputOutput.output("");
         }
 

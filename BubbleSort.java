@@ -54,4 +54,22 @@ public class BubbleSort {
         }
         return books;
     }
+    
+    
+    public static Book[] bubbleSortC(Book[] books) {
+        int size = books.length;
+        int last, current;
+        Book temp;
+        for (last = size - 1; last > 0; last = last - 1) {
+            for (current = 0; current < last; current = current + 1) {
+                
+                if ((books[current].getTitle()).compareToIgnoreCase(books[current - 1].getTitle()) < 0) {
+                    temp = books[current];
+                    books[current] = books[current + 1];
+                    books[current + 1] = temp;
+                }
+            }
+        }
+        return books;
+    }
 }
