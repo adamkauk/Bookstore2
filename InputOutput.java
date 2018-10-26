@@ -38,10 +38,9 @@ public abstract class InputOutput
         }
         return result;} 
 	 
-	public static String inputString(String string) {
-		return input(string);
-        
-    }
+	static String inputString (String prompt) {
+		return input(prompt);
+	}
 	
 
 	public static String input(String string) {
