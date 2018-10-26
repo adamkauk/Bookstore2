@@ -1,3 +1,5 @@
+package bookstore;
+
 
 /**
  * Abstract class ReadingMaterial
@@ -50,7 +52,7 @@ public class ReadingMaterial
      * @param  name    the name of the Bookstore 
      */
     public void setBookstoreName(String bookstoreName)
-    { ReadingMaterial.bookstoreName = bookstoreName; }
+    { this.bookstoreName = bookstoreName; }
     
     /**
      * Accessor method
