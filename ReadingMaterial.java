@@ -16,6 +16,7 @@ public class ReadingMaterial {
 	private String title;
 	private int pages;
 	private int price;
+	private int inventory;
 
 	/**
 	 * Constructor
@@ -32,8 +33,30 @@ public class ReadingMaterial {
 		this.title = title;
 		this.pages = pages;
 		this.price = price;
+		this.inventory = 0;
+	}
+	ReadingMaterial(int id, String title, int pages, int price, int inventory) {
+		bookstoreName = "K&M Bookstore";
+
+		this.id = id;
+		this.title = title;
+		this.pages = pages;
+		this.price = price;
+		this.inventory = inventory;
 	}
 
+	public int getInventory() {
+		return this.inventory;
+	}
+	
+	public boolean setInventory(int new_inventory) {
+		if (new_inventory >= 0) {
+			this.inventory = new_inventory;
+			return true;
+		} else {
+			return false;
+		}
+	}
 	/**
 	 * Accessor method
 	 * 

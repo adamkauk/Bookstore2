@@ -59,7 +59,17 @@ public class BookFile {
 
 				String author = line.substring(token + 1, nextToken);
 
-				Book entry = new Book(id, title, pages, price, chapters, author);
+				token = nextToken;
+				nextToken = line.indexOf(":", token + 1);
+				
+				int inventory;
+				try {
+					inventory = Integer.parseInt(line.substring(token + 1, nextToken));
+				} catch (Exception e) {
+					inventory = 0;
+				}
+
+				Book entry = new Book(id, title, pages, price, chapters, author, inventory);
 
 				arrayOfBooks[length - 1] = entry;
 			}
@@ -67,6 +77,7 @@ public class BookFile {
 		} catch (Exception e) {
 			// bookFile does not exist or can not be created.
 			String err = e.toString();
+			InputOutput.output(err);
 			InputOutput.output("");
 			InputOutput.output("The file does not exist or cannot be created.");
 			InputOutput.output("");
@@ -200,5 +211,44 @@ public class BookFile {
 			InputOutput.output("There are no books in the bookstore.");
 			InputOutput.output("");
 		}
+	}
+	
+	public void outputInventory () {
+		Book[] books = null;
+
+		books = readBookFile();
+
+		if (books != null) {
+
+			if (books.length == 0) {
+				InputOutput.output("");
+				InputOutput.output("The bookstore is empty.");
+				InputOutput.output("");
+			}
+
+			for (int i = 0; i < books.length; i++) {
+
+				Book temp = books[i];
+
+				int id = temp.getId();
+				String title = temp.getTitle();
+				int inventory = temp.getInventory();
+
+				InputOutput.output("");
+				InputOutput.output("=================================");
+				InputOutput.output("ID:" + id);
+				InputOutput.output("TITLE:" + title);
+				InputOutput.output("inventory:" + Integer.toString(inventory));
+
+				InputOutput.output("=================================");
+				InputOutput.output("");
+			}
+
+		} else {
+			InputOutput.output("");
+			InputOutput.output("There are no books in the bookstore.");
+			InputOutput.output("");
+		}
+
 	}
 }

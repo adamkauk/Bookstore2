@@ -21,6 +21,12 @@ public class Book extends ReadingMaterial {
 	 * @param chapters the number of chapters in the book
 	 * @param author   author of the book
 	 */
+	public Book(int id, String title, int pages, int price, int chapters, String author, int inventory) {
+		// Calls the ReadingMaterial constructor.
+		super(id, title, pages, price);
+		this.chapters = chapters;
+		this.author = author;
+	}
 	public Book(int id, String title, int pages, int price, int chapters, String author) {
 		// Calls the ReadingMaterial constructor.
 		super(id, title, pages, price);
@@ -28,6 +34,7 @@ public class Book extends ReadingMaterial {
 		this.chapters = chapters;
 		this.author = author;
 	}
+
 
 	/**
 	 * Accessor method
