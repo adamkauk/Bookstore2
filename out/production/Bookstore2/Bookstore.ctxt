@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\n\ Main\ method\n
+comment1.params=
+comment1.target=Bookstore()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Bookstore\n
+comment2.params=
+comment2.target=void\ showMenu()
+comment2.text=\n\ showMenu\ method\ -\ displays\ the\ start\ menu\ in\ the\ Terminal.\n\ \n
+comment3.params=
+comment3.target=void\ listAllBooks()
+comment3.text=\n\ listAllBooks\ method\ -\ lists\ all\ the\ books\ of\ the\ bookstore\ in\ the\ terminal.\ \n
+comment4.params=
+comment4.target=void\ addBook()
+comment4.text=\n\ addBook\ method\ -\ allows\ the\ user\ to\ add\ a\ book\ through\ the\ terminal\n
+comment5.params=ascending
+comment5.target=void\ sortByPrice(boolean)
+comment5.text=\n\ sortByPrice\ method\n\ \n\ @param\ ascending\ \ \ \ \ whether\ the\ Bookstore\ list\ is\ sorted\ in\ an\ ascending\ or\ descending\ way.\ \n
+comment6.params=
+comment6.target=void\ findBookTitle()
+comment6.text=\n\ findBookTitle\ method\n\ \n\ @return\ \ \ \ \ find\ a\ Book\ with\ a\ given\ book\ title.\n
+numComments=7

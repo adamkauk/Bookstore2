@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=target\ nums
+comment0.target=int\ sequentialSearchTitle(java.lang.String,\ Book[])
+comment0.text=\n\ sequentialSearchTitle\ -\ searches\ an\ array\ of\ Book\ records\ for\ a\ specific\ title.\n\ \n\ @param\ \ target\ \ \ the\ title\ to\ be\ found\n\ @param\ \ nums\ \ \ \ \ the\ array\ of\ Book\ records\ to\ be\ searched\n\ @return\ \ \ \ \ -1\ if\ element\ not\ found,\ else\ the\ index\ where\ our\ element\ resides\ in\ the\ Book[]\ array.\ \n
+comment1.params=target\ nums
+comment1.target=int\ sequentialSearchAuthor(java.lang.String,\ Book[])
+comment1.text=\n\ sequentialSearchAuthor\ -\ searches\ an\ array\ of\ Book\ records\ for\ a\ specific\ author.\n\ \n\ @param\ \ target\ \ \ the\ author\ to\ be\ found\n\ @param\ \ nums\ \ \ \ \ the\ array\ of\ Book\ records\ to\ be\ searched\n\ @return\ \ \ \ \ -1\ if\ element\ not\ found,\ else\ the\ index\ where\ our\ element\ resides\ in\ the\ Book[]\ array.\ \n
+numComments=2
