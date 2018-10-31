@@ -217,4 +217,94 @@ public class Bookstore
         InputOutput.output("");
         showMenu();
     }
+<<<<<<< HEAD
+=======
+
+    public void sortByauthor() {
+        Book[] books = null;
+
+        
+        books = bf.readBookFile();
+
+        if (books == null || books.length == 0) {
+            InputOutput.output("There are no books in the bookstore to sort.");
+        } else {
+            books = BubbleSort.bubbleSortB(books);
+            InputOutput.output("");
+            InputOutput.output("Sorted books by author name :");
+            InputOutput.output("");
+        }
+
+        for (int i = books.length - 1; i >= 0; i--) {
+            int id = books[i].getId();
+            String title = books[i].getTitle();
+            int pages = books[i].getPages();
+            int price = books[i].getPrice();
+            int chapters = books[i].getChapters();
+            String author = books[i].getAuthor();
+
+            InputOutput.output("");
+            InputOutput.output("=================================");
+            InputOutput.output("ID:" + id);
+            InputOutput.output("TITLE:" + title);
+            InputOutput.output("PAGES:" + pages);
+            InputOutput.output("PRICE ($):" + price);
+            InputOutput.output("CHAPTERS:" + chapters);
+            InputOutput.output("AUTHOR(S):" + author);
+
+            InputOutput.output("=================================");
+            InputOutput.output("");
+        }
+
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
+
+    }
+    
+    
+    public void sortByTitle() {
+        Book[] books = null;
+
+        
+        books = bf.readBookFile();
+
+        if (books == null || books.length == 0) {
+            InputOutput.output("There are no books in the bookstore to sort.");
+        } else {
+            books = BubbleSort.bubbleSortC(books);
+            InputOutput.output("");
+            InputOutput.output("Sorted books by Title :");
+            InputOutput.output("");
+        }
+
+        for (int i = books.length - 1; i >= 0; i--) {
+            int id = books[i].getId();
+            String title = books[i].getTitle();
+            int pages = books[i].getPages();
+            int price = books[i].getPrice();
+            int chapters = books[i].getChapters();
+            String author = books[i].getAuthor();
+
+            InputOutput.output("");
+            InputOutput.output("=================================");
+            InputOutput.output("ID:" + id);
+            InputOutput.output("TITLE:" + title);
+            InputOutput.output("PAGES:" + pages);
+            InputOutput.output("PRICE ($):" + price);
+            InputOutput.output("CHAPTERS:" + chapters);
+            InputOutput.output("AUTHOR(S):" + author);
+
+            InputOutput.output("=================================");
+            InputOutput.output("");
+        }
+
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
+
+    }
+>>>>>>> 7f511dabfbcc1a54dbc2b364a359f6f962f79947
 }
