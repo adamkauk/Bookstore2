@@ -227,7 +227,7 @@ public class Bookstore {
     public void sortByauthor() {
         Book[] books = null;
 
-        //sequentially
+        
         books = bf.readBookFile();
 
         if (books == null || books.length == 0) {
@@ -271,7 +271,7 @@ public class Bookstore {
     public void sortByTitle() {
         Book[] books = null;
 
-        //sequentially
+        
         books = bf.readBookFile();
 
         if (books == null || books.length == 0) {
