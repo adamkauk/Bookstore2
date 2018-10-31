@@ -1,5 +1,3 @@
-
-
 import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -65,13 +63,13 @@ public class BookFile
                 
                 arrayOfBooks[length-1] = entry;
             }  
-
+            input.close();
         } catch (Exception e) {
             //bookFile does not exist or can not be created.
             String err = e.toString();
             InputOutput.output("");
             InputOutput.output("The file does not exist or cannot be created.");
-            InputOutput.output("");
+            InputOutput.output(err);
         }
         
         Book[] properArrayOfBooks = new Book[length];
@@ -130,7 +128,7 @@ public class BookFile
                 String err = e.toString();
                 InputOutput.output("");
                 InputOutput.output("The file cannot be created.");
-                InputOutput.output("");
+                InputOutput.output(err);
             }
             
         if(books != null && books.length != 0) {
