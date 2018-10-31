@@ -10,7 +10,7 @@ public class InputTerminal
 {
     // instance variables
     private String title, author;
-    private int id, pages, price, chapters;
+    private int id, pages, price, chapters, inventory;
     //private String[] authorList;
  
     /**
@@ -67,10 +67,15 @@ public class InputTerminal
         while(author.trim().length() == 0  || title.trim().length() > 25) {
                 InputOutput.output("Error: The author name you entered was empty or has more than 25 characters");
                 author = InputOutput.inputString("author: ");
-        } 
-        
-        
-        Book b = new Book(id, title, pages, price, chapters, author);
+        }
+
+        inventory = InputOutput.inputInt("inventory: ");
+        while(inventory < 0 || inventory == 0) {
+            InputOutput.output("Error: The number you entered was not a positive number");
+            price = InputOutput.inputInt("inventory: ");
+        }
+
+        Book b = new Book(id, title, pages, price, chapters, author, inventory);
         
         return b;
     }

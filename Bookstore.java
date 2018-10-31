@@ -132,7 +132,8 @@ public class Bookstore
                 int price = books[i].getPrice();
                 int chapters = books[i].getChapters();
                 String author = books[i].getAuthor();
-                
+                int inventory = books[i].getInventory();
+
                 InputOutput.output("");
                 InputOutput.output("=================================");
                 InputOutput.output("ID:" + id);
@@ -140,7 +141,8 @@ public class Bookstore
                 InputOutput.output("PAGES:" + pages);
                 InputOutput.output("PRICE ($):" + price);
                 InputOutput.output("CHAPTERS:" + chapters);
-                InputOutput.output("AUTHOR(S):" + author);       
+                InputOutput.output("AUTHOR(S):" + author);
+                InputOutput.output("INVENTORY" + inventory);
 
                 InputOutput.output("=================================");
                 InputOutput.output("");
@@ -183,6 +185,7 @@ public class Bookstore
                 int price = books[toShow].getPrice();
                 int chapters = books[toShow].getChapters();
                 String author = books[toShow].getAuthor();
+                int inventory = books[toShow].getInventory();
                 
                 InputOutput.output("");
                 InputOutput.output("=================================");
@@ -192,6 +195,7 @@ public class Bookstore
                 InputOutput.output("PRICE ($):" + price);
                 InputOutput.output("CHAPTERS:" + chapters);
                 InputOutput.output("AUTHOR(S):" + author);
+                InputOutput.output("INVENTORY" + inventory);
                 InputOutput.output("=================================");
                 InputOutput.output("");
 

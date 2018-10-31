@@ -17,6 +17,7 @@ public class ReadingMaterial
     private String title;
     private int pages;
     private int price;
+    private int inventory;
     
     /**
      * Constructor
@@ -26,11 +27,12 @@ public class ReadingMaterial
      * @param  pages    the number of pages of the ReadingMaterial
      * @param  price    the price of the ReadingMaterial
      */
-    ReadingMaterial(int id, String title, int pages, int price) 
+    ReadingMaterial(int id, String title, int pages, int price, int inventory)
     {
         bookstoreName = "K&M Bookstore";
         
         this.id = id;
+        this.inventory = inventory;
         this.title = title;
         this.pages = pages;
         this.price = price;
@@ -47,7 +49,7 @@ public class ReadingMaterial
     /**
      * Mutator method
      * 
-     * @param  name    the name of the Bookstore 
+     * @param  bookstoreName   the name of the Bookstore
      */
     public void setBookstoreName(String bookstoreName)
     { ReadingMaterial.bookstoreName = bookstoreName; }
@@ -128,6 +130,14 @@ public class ReadingMaterial
         if(newPrice >= 0) {
                 	this.price = newPrice; 
         }
+    }
+
+    public int getInventory(){
+        return inventory;
+    }
+
+    public void setInventory (int inventory){
+        this.inventory = inventory;
     }
 
 }
