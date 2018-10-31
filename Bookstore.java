@@ -45,7 +45,8 @@ public class Bookstore {
         InputOutput.output("e) Find book with title");
         InputOutput.output("f) Sort books by author name");
         InputOutput.output("g) Sort books by Title");
-        InputOutput.output("h) Exit");
+        InputOutput.output("h: check inventory");
+        InputOutput.output("i: Exit");
         InputOutput.output("");
         InputOutput.output("");
 
@@ -72,9 +73,13 @@ public class Bookstore {
             case 'g':
                 sortByTitle();
             case 'h':
+            	showInventory(); //TODO/TK implement this.
+            case 'i':
+            	InputOutput.output("exit");
                 System.exit(0);
                 break;
             default:
+            	showMenu(); // repeat current menu
                 break;
         }
     }
@@ -86,6 +91,13 @@ public class Bookstore {
     public void listAllBooks() {
         //sequentially
         bf.outputAllBooksToTerminal();
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
+    }
+    public void showInventory() {
+    	bf.outputInventory();
         InputOutput.output("");
         InputOutput.input("Press ANY BUTTON to continue.");
         InputOutput.output("");
