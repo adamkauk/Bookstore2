@@ -23,10 +23,10 @@ public class Book extends ReadingMaterial
      * @param  chapters the number of chapters in the book
      * @param  author  author of the book
      */
-    public Book(int id, String title, int pages, int price, int chapters, String author)
+    public Book(int id, String title, int pages, int price, int chapters, String author, int inventory)
     {
         //Calls the ReadingMaterial constructor.
-        super(id, title, pages, price);
+        super(id, title, pages, price, inventory);
         
         this.chapters = chapters;
         this.author = author;
@@ -59,7 +59,7 @@ public class Book extends ReadingMaterial
     /**
      * Mutator method
      * 
-     * @param  authors      list of the author of the book 
+     * @param  author 0987     list of the author of the book
      */
     public void setAuthor(String author)
     { this.author = author; }

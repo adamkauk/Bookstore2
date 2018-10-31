@@ -19,7 +19,7 @@ public class BookFile
 {
     static final String FILENAME = "bookFile";   
 
-    /**
+    /**\\\\44er64
      * readBookFile - reads all the book entries from the bookstore
      * 
      * @return     DynamicQueue with all the contents of the bookFile (i.e. all the books in our bookstore) 
@@ -57,14 +57,23 @@ public class BookFile
                 token = nextToken;
                 nextToken = line.indexOf(":", token+1);
 
+
                 int chapters = Integer.parseInt(line.substring(token+1, nextToken));
 
                 token = nextToken;
                 nextToken = line.indexOf(":", token+1);
               
                 String author = line.substring(token+1, nextToken);
+
+                token = nextToken;
+                nextToken = line.indexOf(":", token+1);
+
+                int inventory = Integer.parseInt(line.substring(token+1, nextToken));
+
+                token = nextToken;
+                nextToken = line.indexOf(":", token+1);
                     
-                Book entry = new Book(id, title, pages, price, chapters, author);
+                Book entry = new Book(id, title, pages, price, chapters, author, inventory);
                 
                 arrayOfBooks[length-1] = entry;
             }  
@@ -146,7 +155,9 @@ public class BookFile
                 int pages = temp.getPages();
                 int price = temp.getPrice();
                 int chapters = temp.getChapters();
-                String author = temp.getAuthor(); 
+                String author = temp.getAuthor();
+                int inventory = temp.getInventory();
+
                 
                 //append them to the bookFile file.
                 output.print(id + ":");
@@ -154,7 +165,8 @@ public class BookFile
                 output.print(pages + ":");
                 output.print(price + ":");
                 output.print(chapters + ":");
-                output.println(author + ":");        
+                output.print(author + ":");
+                output.print(inventory + ":");
             }
             
         } else {
@@ -192,6 +204,7 @@ public class BookFile
                 int price = temp.getPrice();
                 int chapters = temp.getChapters();
                 String author = temp.getAuthor();
+                int inventory = temp.getInventory();
 
                 InputOutput.output("");
                 InputOutput.output("=================================");
@@ -201,6 +214,7 @@ public class BookFile
                 InputOutput.output("PRICE ($):" + price);
                 InputOutput.output("CHAPTERS:" + chapters);
                 InputOutput.output("AUTHOR(S):" + author);
+                InputOutput.output("INVENTORY:" + inventory);
        
 
                 InputOutput.output("=================================");
