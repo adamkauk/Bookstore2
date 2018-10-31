@@ -1,4 +1,6 @@
 
+
+
 /**
  * Abstract class ReadingMaterial
  * This class describes the basic information of a reading material in the
@@ -50,7 +52,7 @@ public class ReadingMaterial
      * @param  name    the name of the Bookstore 
      */
     public void setBookstoreName(String bookstoreName)
-    { ReadingMaterial.bookstoreName = bookstoreName; }
+    { this.bookstoreName = bookstoreName; }
     
     /**
      * Accessor method
