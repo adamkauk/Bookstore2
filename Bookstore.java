@@ -47,7 +47,8 @@ public class Bookstore
         InputOutput.output("f) Sort books by author name");
         InputOutput.output("g) Sort books by Title");
         InputOutput.output("h) Change inventory");
-        InputOutput.output("i) Exit");
+        InputOutput.output("i) Search by author");
+        InputOutput.output("j) Exit");
         InputOutput.output("");
         InputOutput.output("");
 
@@ -71,7 +72,9 @@ public class Bookstore
             case 'h':
                 System.exit(0);
                 break;
-            case 'i' : 
+            case 'i':
+                findBookAuthor();
+            case 'j' : 
             	changeInventory(); // change inventory case
             	break;
             default:
@@ -330,5 +333,64 @@ public class Bookstore
         InputOutput.output("");
         showMenu();
 
+    }
+     /**
+     * findBookAuthor method
+     * 
+     */
+    public void findBookAuthor()
+    {
+        InputOutput.output("");
+        InputOutput.output("Search for a book.");
+        String searchParameter = InputOutput.input("Author to search: ");
+        InputOutput.output("");
+
+        Book[] books = null;
+
+        //sequentially
+        books = bf.readBookFile();
+
+        int toShow = SequentialSearch.sequentialSearchAuthor(searchParameter, books);
+
+        do {
+
+            if(toShow == -1) 
+                InputOutput.output("There is no book in the bookstore with such an author.");
+            else {
+                int id = books[toShow].getId();
+                String title = books[toShow].getTitle();
+                int pages = books[toShow].getPages();
+                int price = books[toShow].getPrice();
+                int chapters = books[toShow].getChapters();
+                String author = books[toShow].getAuthor();
+                
+                InputOutput.output("");
+                InputOutput.output("=================================");
+                InputOutput.output("ID:" + id);
+                InputOutput.output("TITLE:" + title);
+                InputOutput.output("PAGES:" + pages);
+                InputOutput.output("PRICE ($):" + price);
+                InputOutput.output("CHAPTERS:" + chapters);
+                InputOutput.output("AUTHOR(S):" + author);
+                InputOutput.output("=================================");
+                InputOutput.output("");
+
+                int ltemp = books.length - toShow - 1;
+                Book[] temp = new Book[ltemp];
+
+                for(int i=0; i<temp.length; i++)
+                    temp[i] = books[toShow+i+1];
+
+                books = temp;
+
+                toShow = SequentialSearch.sequentialSearchAuthor(searchParameter, books);
+
+            }
+        } while(toShow != -1);
+
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
     }
 }
