@@ -64,4 +64,10 @@ public class Book extends ReadingMaterial {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
+	public void setInventory(int newInventory) {
+		InputOutput.output("not implmented yet. Please implement #TK ");
+		// TODO Auto-generated method stub
+		
+	}
 }

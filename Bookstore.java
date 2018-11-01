@@ -74,9 +74,12 @@ public class Bookstore {
             case 'h':
                 System.exit(0);
                 break;
+            case 'i' : 
+            	changeInventory(); // change inventory case
+            	break;
             default:
-                break;
                 showMenu();
+                break;
         }
     }
 
@@ -102,6 +105,20 @@ public class Bookstore {
 
         bf.writeToBookFile(b);
 
+        InputOutput.output("");
+        InputOutput.input("Press ANY BUTTON to continue.");
+        InputOutput.output("");
+        showMenu();
+    }
+
+    // Emma's change inventory function 
+    public void changeInventory(){
+        String searchParameter = InputOutput.inputString("Please enter the title of the book:");
+        int newInventory = InputOutput.inputInt("Please enter the new inventory:");
+        Book[] books = null;
+        books = bf.readBookFile();
+        int toShow = SequentialSearch.sequentialSearchTitle(searchParameter, books);
+        books[toShow].setInventory(newInventory);
         InputOutput.output("");
         InputOutput.input("Press ANY BUTTON to continue.");
         InputOutput.output("");
