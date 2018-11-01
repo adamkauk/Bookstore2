@@ -76,6 +76,7 @@ public class Bookstore {
                 break;
             default:
                 break;
+                showMenu();
         }
     }
 
