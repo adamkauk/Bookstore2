@@ -66,6 +66,9 @@ public class Bookstore
             break;
             case 'g' : System.exit(0);
             break;
+            case 'i' : changeInventory(); // change inventory case
+            break;
+
             default : showMenu();
             break;
         }
@@ -100,6 +103,7 @@ public class Bookstore
         showMenu();
     }
 
+    // Emma's change inventory function 
     public void changeInventory(){
         String searchParameter = InputOutput.inputString("Please enter the title of the book:");
         int newInventory = InputOutput.inputInt("Please enter the new inventory:");
