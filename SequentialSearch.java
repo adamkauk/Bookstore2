@@ -1,6 +1,4 @@
 
-
-
 /**
  * SequentialSearch holds the methods needed for sequential search for this program.
  * 
