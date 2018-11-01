@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication34;
+package JavaApplication34.src.javaapplication34;
 
 /**
  *
